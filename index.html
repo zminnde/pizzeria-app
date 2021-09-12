@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pizzeria</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- Buttons -->
+    <div class="tabs box">
+        <button class="tab-button" value="add-pizza">Create pizza</button>
+        <button class="tab-button" id="defaultOpen" value="show-menu">Menu</button>
+    </div>
+
+    <!-- Pages -->
+    <div id="add-pizza" class="tabcontent">
+        <form class="card text" id="form">
+            <label id="name-label" for="name">Name*</label>
+            <input class="input-field" id="name" type="text" placeholder="Enter pizza name" maxlength="30" required>
+
+            <label id="price-label" for="price">Price*</label>
+            <input class="input-field" id="price" type="number" placeholder="Enter price" min="0.01" step="0.01"
+                required>
+
+            <label id="heat-label" for="heat">Heat <a class="smalltext">(optional)</a></label>
+            <select class="input-field" id="heat">
+                <option selected value="0">None</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+
+            <label for="toppings">Toppings* <a class="smalltext">(min 2)</label>
+            <div class="input-field" id="toppings">
+                <input type="checkbox" id="mushrooms" value="mushrooms">
+                <label for="mushrooms">Mushrooms</label><br>
+
+                <input type="checkbox" id="mozzarella" value="mozzarella">
+                <label for="mozzarella">Mozzarella cheese</label><br>
+
+                <input type="checkbox" id="parmesan" value="parmesan">
+                <label for="parmesan">Parmesan cheese</label><br>
+
+                <input type="checkbox" id="ham" value="ham">
+                <label for="ham">Ham</label><br>
+
+                <input type="checkbox" id="chorizo" value="chorizo">
+                <label for="chorizo">Chorizo</label><br>
+
+                <input type="checkbox" id="onions" value="onions">
+                <label for="onions">Onions</label><br>
+
+                <input type="checkbox" id="tomatoes" value="tomatoes">
+                <label for="tomatoes">Tomatoes</label><br>
+
+                <input type="checkbox" id="olives" value="olives">
+                <label for="olives">Olives</label><br>
+
+                <input type="checkbox" id="basil" value="basil">
+                <label for="basil">Basil</label><br>
+
+                <input type="checkbox" id="chili" value="chili">
+                <label for="chili">Chili</label><br>
+
+                <input type="checkbox" id="jalapenos" value="jalapenos">
+                <label for="jalapenos">Jalapenos</label><br>
+            </div>
+
+            <div>Which photo suits your pizza best?</div>
+            <div class="photos" id="photo">
+
+                <input class="pizza" type="radio" name="picture" id="pizza1" value="pizza1.jpg">
+                <label for="pizza1"><img class="pizzaimage" src="images/pizza1.jpg"></label>
+
+                <input class="pizza" type="radio" name="picture" id="pizza2" value="pizza2.jpg">
+                <label for="pizza2"><img class="pizzaimage" src="images/pizza2.jpg"></label><br>
+
+                <input class="pizza" type="radio" name="picture" id="pizza3" value="pizza3.jpg">
+                <label for="pizza3"><img class="pizzaimage" src="images/pizza3.jpg"></label>
+
+                <input class="pizza" type="radio" name="picture" id="pizza4" value="pizza4.jpg">
+                <label for="pizza4"><img class="pizzaimage" src="images/pizza4.jpg"></label><br>
+
+                <input type="radio" name="picture" id="nopizza" value="nopizza.jpg" required>
+                <label for="nopizza">I do not want picture for this pizza</label>
+            </div>
+
+            <button class="submit-button" id="submit" type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div id="show-menu" class="tabcontent">
+        <div class="sortable box">
+            <label for="sort-dropdown">Sort by:</label>
+            <select id="sort-dropdown">
+                <option selected value="name">Name</option>
+                <option value="price">Price</option>
+                <option value="heat">Heat</option>
+            </select>
+        </div>
+
+        <div id="menu">
+            
+        </div>
+    </div>
+
+    <script src="js/script.js">
+
+    </script>
+</body>
+
+</html>

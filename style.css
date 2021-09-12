@@ -1,0 +1,177 @@
+body {
+    background-color: #92817a;
+    font-family: sans-serif;
+}
+
+.sortable {
+    display: flex;
+    align-items: right;
+    justify-content: right;
+}
+
+.pizzaimage {
+    width: 300px;
+    height: 200px;
+    
+}
+
+input[type=radio].pizza {
+    position:absolute;    
+}
+
+input.pizza[type=radio] + label{
+    border-color: white;
+    border-style: solid;
+    height: 200px;
+    width: 300px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    position: relative;
+    vertical-align: middle;
+    /* left: -20px; */
+}
+
+input.pizza[type=radio]:checked + label{
+    border-color: blue;
+    border-style: solid;
+    height: 200px;
+    width: 300px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+button {
+    background-color: #fffbff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    /* margin: 10px; */
+    width: 50%;
+    padding: 15px 32px;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #f1dabf;
+}
+
+.active {
+    background-color: #a9927d !important;
+}
+
+.submit-button {
+    margin-top: 15px;
+    width: 100%;
+    background-color: #4CAF50;
+}
+
+.box {
+    flex-basis: 100%;
+    max-width: 40em;
+    margin: auto;
+    padding: 5px;
+    /* padding: 1em;  */
+}
+
+
+
+.tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabcontent {
+    display: none;
+}
+
+.card {
+    max-width: 620px;
+    padding: 20px;
+    margin: auto;
+    background-color: #656665;
+    border-radius: 5px;
+    text-align: left;
+  }
+
+.text {
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+  }
+
+  .smalltext {
+    font-size: 16px !important;
+    color: white;
+    vertical-align: middle;
+  }
+
+  .input-field {
+    width: 100%;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+  }
+
+/*styling menu item:*/
+
+.item {
+    flex-basis: 100%;
+    max-width: 40em;
+    border: 1px solid black;
+    margin: auto;
+    color: #fff;
+    /* padding: 1em;  */
+    background-color: #656665;
+  }
+
+  .profile-row {
+    display: flex;
+  }
+  .profile-row .dp {
+    flex-basis: 33.3%;
+    position: relative;
+    margin: 24px;
+    align-self: center;
+  }
+  .profile-row .desc {
+    flex-basis: 66.6%;
+  }
+  
+  .profile-row .dp img {
+    width: 220px;
+    height: 180px;
+    box-shadow: 0px 0px 4px 3px #04030f;
+  }
+  .profile-row .desc {
+    padding: 1em;
+  }
+  
+  .profile-row .desc {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+  }
+  .profile-row .desc h1 {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  .profile-row .desc .price {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .profile-row .desc .delete-button {
+      display: flex;
+      justify-content: right;
+      align-content: right;
+      padding: 0px 0px;
+  }
+
+  .profile-row .desc .delete-button button {
+    width: 80px;
+    padding: 8px 5px;
+    background-color: red;
+    color: white;
+}
